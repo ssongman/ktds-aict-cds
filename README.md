@@ -5,7 +5,64 @@
 
 
 
-# 1. 예상문제유형
+# 1. 예상 범위
+
+
+
+## 1) AKS HA 구성
+
+* HPA
+* NoodPool 기반 
+
+
+
+## 2) Private / Public AKS
+
+* Public / Private 설정 이해
+* Private 환경에서의 AKS 
+
+
+
+
+
+## 3) kafka
+
+* kafka 포함 비즈니스 아키텍처
+
+* kafka 통신
+
+  * kubernetes cluster 기반에 설치된 Kafka 통신 방식의 이해
+
+  * https://github.com/ssongman/ktds-edu-kafka/blob/main/kafka/2.kafka-hands-in.md#4-accessing-kafka
+
+
+
+
+
+## 4) DevOps(CICD)
+
+* Container 환경에서의 CICD 아키텍처 
+* Azure DevOps 지식
+
+
+
+## 5) 기타1
+
+
+
+## 6) 기타2
+
+
+
+## 7) 기타3
+
+
+
+
+
+
+
+# 2. 예상문제 유형
 
 
 
@@ -27,38 +84,10 @@
 
 ## 3) 유형3
 
-* AKS HA 구성
-  * HPA
-  * NoodPool 기반 
+
+
+## 3) 유형4
 
 
 
-
-
-## 4) 유형4
-
-
-
-
-
-
-
-## 5) 유형5
-
-
-
-
-
-
-
-# 2. 예상문제
-
-
-
-## 1) 문제1
-
-
-
-
-
-## 2) 문제2
+## 3) 유형5
