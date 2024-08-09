@@ -36,6 +36,11 @@ Test
 
   * https://github.com/ssongman/ktds-edu-kafka/blob/main/kafka/2.kafka-hands-in.md#4-accessing-kafka
 
+* kafka rebalance 및 회피전략
+* kafka 파티셔닝 및 성능최적화
+  * 처리량기준/브로커 수를 고려한 파티셔닝 등
+
+
 
 
 
