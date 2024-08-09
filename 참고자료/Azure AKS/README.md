@@ -1,4 +1,4 @@
-## AKS
+## Azure Kubernetes Service
 
 - Network 및 Infra 관련 고가용성을 위한 AZ 구성과, 노드 그룹 분배 및 설계 전략 관련
 - backup 전략
