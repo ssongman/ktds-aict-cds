@@ -31,8 +31,8 @@ Z사는 Creator들이 마켓에서 그림, 영상 등을 NFT(Non-fungible-token)
 | Account	| 설명 |
 |-----------|-------------------|
 | Network	| 관문 Account로 WAF/UTM 등 보안 장비 등이 설치되는 계정이며 Public Traffic에 대한 제어를 하고 있다.
-| Shared	IAM, Logging Account 역할을 하고 있으며 DevOps 환경 및 보안 장비 등을 설치한다.
-| DEV/STG/PRD	개발/검증/운영 Application이 설치되는 Account이다.
+| Shared	| IAM, Logging Account 역할을 하고 있으며 DevOps 환경 및 보안 장비 등을 설치한다.
+| DEV/STG/PRD	| 개발/검증/운영 Application이 설치되는 Account이다.
 
 ## 과제 제시 - 요구 사항
 
