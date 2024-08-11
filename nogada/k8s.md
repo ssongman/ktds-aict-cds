@@ -1,0 +1,4 @@
+- liveness & readiness probe, startup probe
+- hpa
+- ingress controller
+- 
