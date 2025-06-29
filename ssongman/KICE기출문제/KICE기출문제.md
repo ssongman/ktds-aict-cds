@@ -39,21 +39,52 @@ A사는 Azure로 인프라를 마이그레이션하려고 하며 그 중 Databas
 - DBLink를 사용할 수 있어야 한다.
 
 ### [보기]
-| SQL서버 종류 및 Tier                             | 고가용성 옵션              |
-| ------------------------------------------------ | -------------------------- |
-| 가. Azure SQL DataBase General Purpose           | 가. Active Geo-Replication |
-| 나. Azure SQL Database Business Critical         | 나. Auto Failover Group    |
-| Et. Azure SQL Managed Instance General Purpose   |                            |
-| 라. Azure SQL Managed Instance Business Critical |                            |
+
+```
+[SQL서버 종류 및 Tier] 
+가. Azure SQL DataBase General Purpose 
+나. Azure SQL DataBase Business Critical 
+다. Azure SQL Managed Instance General Purpose 
+라. Azure SQL Managed Instance Business Critical
+```
+
+
+
+```
+[고가용성 옵션] 
+가. Active Geo-Replication 
+나. Auto Failover Group 
+```
+
+
 
 **[답안]**
 
-(1) SQL서버 종류 및 Tier 보기 선택:  
-(2) 고가용성 옵션 보기 선택:  
+(1) SQL서버 종류 및 Tier 보기 선택:  ____
+(2) 고가용성 옵션 보기 선택:  ____
 
 **(정답)** 라, 나  
 
-**(해설)** Azure SQL Managed Instance는 Active Geo-Replication 기능이 없음. Primary Region에 Read Replica는 기본 제공 HA를 구성하여 사용하고, Pair Region인 Korea South에 Read Replica가 필요하므로 Auto Failover Group으로 구성함.
+**(해설)** Azure SQL Managed Instance는 Active Geo-Replication 기능이 없음. 
+
+Primary Region에 Read Replica는 기본 제공 HA를 구성하여 사용하고, Pair Region인 Korea South에 Read Replica가 필요하므로 Auto Failover Group으로 구성함.
+
+ Azure SQL DataBase 는 DBLink를 사용할 수 없으며 Azure SQL Managed Instance는 가능하나 MSSQL만  가능, Timezone 은 Azure SQL Managed Instance 에서만 설정 가능하다.
+
+
+
+(배점) 4
+
+(난이도) 중
+
+- 문제유형 : 단답형
+- 출제영역 : Cloud Service Architecture > 요구사항기반 서비스구성요소 선정, 기반인프라 구축 및 운영
+- 문제제목 : MSSQL PaaS 서비스의 제약사항 이해
+- 출제의도 : MSSQL PaaS 서비스의 제약사항 이해 확인 
+
+
+
+
 
 ---
 
@@ -71,6 +102,19 @@ A사는 Azure로 인프라를 마이그레이션하려고 하며 그 중 Databas
 
 **(해설)** Storage Account에서 private endpoint와 퍼블릭 접근 차단 설정은 별개의 설정이며, 각각 독립적으로 설정할 수 있으므로, private endpoint 구성 여부로 퍼블릭 접근 가능 여부를 판별할 수 없다.
 
+(배점) 4
+
+(난이도) 중
+
+* 문제유형 : 선다형
+* 출제영역 : Cloud Service Architecture > 요구사항기반 서비스구성요소 선정, 기반인프라 구축 및 운영
+* 문제제목 : Storage Account에 대한 리소스 구성 감사
+* 출제의도 : 리소스의 변경관리를 할 수 있는 서비스 및 감사 설정에 대한 이해도 확인 
+
+
+
+
+
 ---
 
 ## 문항 4
@@ -85,7 +129,51 @@ A사는 차세대 프로젝트를 위해 Azure Public Cloud를 선정하였으�
 
 **(정답)** 2 
 
-**(해설)** 1) VM의 경우 AZ을 지정하면 AS을 사용자가 지정할 수 없다. 
+**(해설)** 
+
+1) VM의 경우 AZ을 지정하면 AS을 사용자가 지정할 수 없다. 
+
+2) 정답
+3) Subscription 내의 Zone1, 2, 3 이 물리적 Datacenter 를 의미하는 것이 아니고 논리 적인 것이므로 Subscription당  물리적 Datacenter와 Zone 1, 2, 3 이 서로 다를 수 있다.  
+4) VNET 은 Zone Redundant서비스 이므로 Zone사용을 위해 별도로 존을 정의할 수 없고 자동으로 Zone으로  확장된다.  
+5) Azure VPN Gateway 는 Zone-redundant 를 지원하는 SKU가 있으므로 해당 SKU를 사용하게 되면 2개의 Zone에  자동으로 2대의 Instance가 배포된다.  
+
+(배점) 4 
+
+(난이도) 중
+
+* 문제유형 : 선다형
+* 출제영역 : Cloud Service Architecture > 시스템 비기능요건(성능, 가용성, 확장성, 비용최적화)을 반영한 구축 및  운영
+* 문제제목 : Azure 가용성에 대한 이해
+* 출제의도 : Azure 리소스 가용성에 대한 이해
+
+
+
+
+
+### Availability Set vs Availability Zone 비교표
+
+Azure의 **Availability Set**과 **Availability Zone**은 모두 **VM 가용성(Availability)**을 높이기 위한 기능이지만, 사용 방식과 보장 수준, 인프라 구성 방식이 다르다.
+
+| 항목                 | **Availability Set**                      | **Availability Zone**                         |
+| -------------------- | ----------------------------------------- | --------------------------------------------- |
+| **가용성 수준**      | 고가용성(HA, 약 99.95%)                   | 매우 높은 고가용성 (ZRS, 약 99.99%)           |
+| **물리적 위치 분산** | 동일 데이터센터 내에서 분산 (FD, UD 기반) | 서로 다른 데이터센터(Zone) 간 분산            |
+| **배포 대상**        | VM 전용 (Classic 또는 ARM)                | VM, Disk, IP, LB 등 다양한 리소스             |
+| **기반 기술**        | Fault Domain / Update Domain              | 물리적으로 분리된 Zone                        |
+| **재해 복구 효과**   | 제한적 (전원, 네트워크 일부 실패 방지)    | **지진/화재 등 지역 단위 장애에도 복구 가능** |
+| **네트워크 지연**    | 최소 (동일 데이터센터)                    | 약간 존재 (Zone 간 통신)                      |
+| **VM 생성 시**       | Availability Set 지정                     | **Zone 번호 (1,2,3 등) 지정**                 |
+| **변경 가능 여부**   | VM 생성 후 변경 불가                      | VM 생성 후 변경 불가                          |
+| **주요 사용 사례**   | 기존 시스템, 단순 HA 필요 시              | 금융, 게임, 실시간 시스템 등 높은 SLA 요구 시 |
+
+
+
+
+
+
+
+
 
 ---
 
@@ -103,6 +191,33 @@ B사는 VM 기반 WEB / WAS 서버를 이중화 구성하였고, 대용량 파�
 
 **(해설)** 한번만 기록하고 시퀀스 액세스로 파일을 사용하는 워크로드의 경우 Azure Files보다 Azure Blob Storage가 더 최적화되어 있다. 또한, 인증된 클라이언트에 SAS를 제공하여 필요한 최소한의 권한 및 유효 기간 부여가 가능하다.
 
+```
+1) Access Key는 구성과 데이터에 대한 권한을 부여하는데 사용 가능하기 때문에 보안상 문제가 발생할 수 있다.  
+2) Azure Files 는 랜덤 액세스 파일에 더 적합하며 동영상 파일 혹은 데이터 분석을 위한 로우 파일 저장 및 읽기에는
+   Blob Storage가 더 적합하며 비용 효율적이다.
+3) Azure Shard Disk 를 공유 볼륨으로 사용하려는 경우 별도의 구성이 필요하며
+   Azure Blob Storage 대비 비용이 비싸다.
+5) Azure Function 을 사용하여 대용량 파일을 처리하는 경우 처리시간이 기본 15분, 최대 60분으로 
+   (Azure  Function 의 호스팅 옵션에 따라 다르나 추가비용 발생) 제약을 받을 수 있으며 
+   처리할 수 있는 요청도 기본  100MB(처리량 증가 시 호스팅 옵션 설정 필요하나 비용 증가 및 비용효율성이 낮음)로 
+   설정되어 있어 적합하지 않다.
+```
+
+
+
+(배점) 3 
+
+(난이도) 중
+
+* 문제유형 : 선다형
+* 출제영역 : Cloud Service Architecture> 시스템 비기능요건(성능, 가용성, 확장성, 비용최적화)을 반영한 구축 및  운영
+* 문제제목 : SAS를 사용한 Azure Blob Storage 구성  Secret
+* 출제의도 : 비용과 성능 효율적인 스토리지 아키텍처 설계 
+
+
+
+
+
 ---
 
 ## 문항 6
@@ -118,6 +233,41 @@ VM 기반으로 구축된 웹 서비스를 운영하고 있다. 해당 서비스
 **(정답)** 1
 
 **(해설)** TCP로 상태를 모니터링하는 경우 웹 서비스의 비정상적인 동작 감지가 되지 않는다. TCP의 경우 단순 TCP 핸드셰이크 여부만을 체크한다.
+
+```
+1) Azure Load Balancer 로 웹 서비스의 상태를 모니터링 하기 위하여 프로토콜을 HTTP 또는 HTTPS로 설정하는 
+경우 상태 체크를 위한 요청에 대한 HTTP 응답 코드가 200 (OK)으로 고정되어 있어 다른 HTTP 응답 코드 403 
+(Forbidden), 500 (Internal Server Error ) 등이 반환되는 경우 오류 상태로 인지한다. 
+
+2) Session persistence 설정은 동일한 클라이언트에서 발생한 요청을 동일한 VM에서 처리하도록 지정하는 옵션이며 
+해당 설정을 변경한다고 하여도 일부 요청은 기존과 동일하게 장애가 발생한 서버로 전달된다. 
+
+3) 상태 체크 확인 주기를 변경한다고 하여도 VM 서버가 서비스 Port를 정상적으로 Listen하고 있기 때문에 기존과 
+동일하게 장애가 발생 서버로 요청이 전달된다. 
+
+4) Azure Load Balance 의 경우 정상 응답 HTTP 상태 코드의 범위를 지정하는 옵션이 존재 하지 않는다. 해당 옵션은 
+Application Gateway 에서 제공한다. 
+
+5) Idle timeout 값은 Azure Load Balance 에 연결된 클라이언트가 요청없이 일정 시간이 경과하는 경우 자동으로 
+연결을 종료하는 기능이다.
+```
+
+
+
+(배점) 4
+
+(난이도) 중
+
+* 문제유형 : 선다형
+* 출제영역 : Cloud Service Architecture> 시스템 비기능요건(성능, 가용성, 확장성, 비용최적화)을 반영한 구축 및  운영  Secret
+* 문제 제목: Load balancer 구성 항목 중 Health probe의 이해
+* 출제 의도: Load balancer 구성 항목 중 Health probe의 이해 여부 확인 
+
+
+
+
+
+
 
 ---
 
@@ -135,6 +285,12 @@ K 책임은 G 고객사의 클라우드 MSP를 수행하는 담당자이다. 디
 
 **(해설)** 데이터 디스크의 사이즈를 직접 줄일 수 없다. 데이터 디스크의 사이즈를 축소하고자 하는 경우 신규 디스크를 추가한 후 기존 데이터를 신규 디스크에 복제 후 기존 데이터 디스크를 삭제하는 방식(마이그레이션)을 통해 진행해야 한다.
 
+이 과정에서 서비스 중단이 필요할 수 있음
+
+
+
+
+
 ---
 
 ## 문항 8
@@ -150,6 +306,8 @@ Azure Public 클라우드와 On-premise간 전용선 연결 구성을 하려고 
 **(정답)** 3
 
 **(해설)** Circuit 만으로는 불가능하며 Global Reach를 추가 구성하여 사용해야 가능하다.
+
+
 
 ---
 
