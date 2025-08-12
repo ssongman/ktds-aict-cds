@@ -1,8 +1,10 @@
 
 
+# 1. 프롬프트
 
 
-프롬프트1
+
+## 프롬프트1
 
 ```
 
@@ -25,15 +27,11 @@
 
 
 
+# 2. 시험범위
 
 
-* **Azure Resource RBAC Policy: 관리그룹 및 구도에 계층형 구조에 따른 사용자권한 제어**
 
-  * 링크 : (https://learn.microsoft.com/ko-kr/azure/role-based-access-control/scope-overview)
-
-  - Key : 관리그룹→구독→RG→리소스 스코프 구분
-
-
+## Raw
 
 
 
@@ -216,3 +214,25 @@
 **AKS with GPU 구성시, 자원을 효율적으로 사용하기 위한 방안**
 
 - ●노드풀 분리
+
+
+
+
+
+
+
+## 변환 샘플
+
+
+
+* **Azure Resource RBAC Policy: 관리그룹 및 구도에 계층형 구조에 따른 사용자권한 제어**
+
+  * 링크 : (https://learn.microsoft.com/ko-kr/azure/role-based-access-control/scope-overview)
+
+  - Key : 관리그룹→구독→RG→리소스 스코프 구분
+
+
+
+
+
+## 변환 완료
