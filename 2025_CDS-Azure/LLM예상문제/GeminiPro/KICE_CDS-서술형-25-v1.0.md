@@ -1,16 +1,12 @@
-# kice-azure-100-GeminiPro_v1.2
+# KICD-CDS-서술형-25문제
 
 
 
 
 
-## (1) Azure 기본 서비스 & 거버넌스
+## 문항 1: 
 
-
-
-
-
-### 문항 1: Azure Policy와 Azure RBAC(역할 기반 액세스 제어)의 주요 차이점은 무엇이며, 언제 각각을 사용해야 합니까?
+Azure Policy와 Azure RBAC(역할 기반 액세스 제어)의 주요 차이점은 무엇이며, 언제 각각을 사용해야 합니까?
 
 
 
@@ -41,7 +37,9 @@ Azure Policy와 Azure RBAC(역할 기반 액세스 제어)는 Azure 거버넌스
 
 
 
-### 문항 2: Azure Policy 정의(Definition)의 기본 구조와 각 구성 요소(mode, parameters, policyRule)의 역할은 무엇입니까?
+## 문항 2: 
+
+Azure Policy 정의(Definition)의 기본 구조와 각 구성 요소(mode, parameters, policyRule)의 역할은 무엇입니까?
 
 
 
@@ -75,7 +73,9 @@ Azure Policy 정의는 JSON 형식을 사용하여 리소스가 준수해야 할
 
 
 
-### 문항 3: Azure Policy의 이니셔티브(Initiative)란 무엇이며, 이를 사용하면 어떤 이점이 있습니까?
+## 문항 3: 
+
+Azure Policy의 이니셔티브(Initiative)란 무엇이며, 이를 사용하면 어떤 이점이 있습니까?
 
 
 
@@ -103,7 +103,9 @@ Azure Policy의 이니셔티브(Initiative), 또는 정책 세트(Policy Set)는
 
 
 
-### 문항 4: Azure Blueprints란 무엇이며, ARM 템플릿과 어떻게 다릅니까?
+## 문항 4: 
+
+Azure Blueprints란 무엇이며, ARM 템플릿과 어떻게 다릅니까?
 
 
 
@@ -140,7 +142,9 @@ ARM 템플릿과 Azure Blueprints는 모두 코드형 인프라(Infrastructure a
 
 
 
-### 문항 5: Azure Arc의 핵심 기능은 무엇이며, 하이브리드 및 멀티클라우드 환경에서 어떤 가치를 제공합니까?
+## 문항 5: 
+
+Azure Arc의 핵심 기능은 무엇이며, 하이브리드 및 멀티클라우드 환경에서 어떤 가치를 제공합니까?
 
 
 
@@ -177,7 +181,9 @@ Azure Arc는 기존의 복잡한 하이브리드 및 멀티클라우드 관리�
 
 
 
-### 문항 6: Azure Arc-enabled Kubernetes에서 GitOps는 어떻게 작동하며, 이를 통해 얻을 수 있는 이점은 무엇입니까?
+## 문항 6: 
+
+Azure Arc-enabled Kubernetes에서 GitOps는 어떻게 작동하며, 이를 통해 얻을 수 있는 이점은 무엇입니까?
 
 
 
@@ -205,7 +211,9 @@ Azure Arc-enabled Kubernetes에서 GitOps는 클러스터 구성 및 애플리�
 
 
 
-### 문항 7: Azure Monitor의 메트릭(Metrics)과 로그(Logs)의 차이점은 무엇이며, 각각 어떤 시나리오에 적합합니까?
+## 문항 7: 
+
+Azure Monitor의 메트릭(Metrics)과 로그(Logs)의 차이점은 무엇이며, 각각 어떤 시나리오에 적합합니까?
 
 
 
@@ -246,7 +254,9 @@ Azure Monitor는 Azure 리소스의 성능과 상태를 파악하기 위한 두 
 
 
 
-### 문항 8: Azure Monitor에서 메트릭 경고(Metric Alert)를 구성할 때 '차원(Dimensions)'을 사용하는 이유는 무엇이며, 구체적인 사용 사례는 무엇입니까?
+## 문항 8: 
+
+Azure Monitor에서 메트릭 경고(Metric Alert)를 구성할 때 '차원(Dimensions)'을 사용하는 이유는 무엇이며, 구체적인 사용 사례는 무엇입니까?
 
 
 
@@ -276,7 +286,9 @@ Azure Monitor에서 메트릭 경고를 구성할 때 **차원(Dimensions)**을 
 
 
 
-### 문항 9: Azure Functions와 Azure Logic Apps는 모두 서버리스 워크플로우를 자동화하는 데 사용됩니다. 두 서비스의 주요 차이점은 무엇이며, 어떤 상황에서 하나를 다른 것보다 선호해야 합니까?
+## 문항 9: 
+
+Azure Functions와 Azure Logic Apps는 모두 서버리스 워크플로우를 자동화하는 데 사용됩니다. 두 서비스의 주요 차이점은 무엇이며, 어떤 상황에서 하나를 다른 것보다 선호해야 합니까?
 
 
 
@@ -319,7 +331,9 @@ Azure Functions와 Azure Logic Apps는 모두 이벤트에 의해 트리거되�
 
 
 
-### 문항 10: Azure Functions의 호스팅 계획(Consumption, Premium, Dedicated)의 차이점을 설명하고, 각 계획이 적합한 시나리오를 제시하시오.
+## 문항 10: 
+
+Azure Functions의 호스팅 계획(Consumption, Premium, Dedicated)의 차이점을 설명하고, 각 계획이 적합한 시나리오를 제시하시오.
 
 
 
@@ -378,7 +392,9 @@ Azure Functions는 다양한 워크로드 요구사항과 예산에 맞춰 세 �
 
 
 
-### 문항 11: Durable Functions란 무엇이며, 일반적인 Azure Functions와 비교하여 어떤 종류의 문제를 해결합니까?
+## 문항 11: 
+
+Durable Functions란 무엇이며, 일반적인 Azure Functions와 비교하여 어떤 종류의 문제를 해결합니까?
 
 
 
@@ -421,7 +437,9 @@ Durable Functions는 주로 세 가지(또는 네 가지) 유형의 함수로 �
 
 
 
-### 문항 12: Azure Logic Apps의 주요 구성 요소(워크플로우, 커넥터, 트리거, 작업)에 대해 설명하시오.
+## 문항 12: 
+
+Azure Logic Apps의 주요 구성 요소(워크플로우, 커넥터, 트리거, 작업)에 대해 설명하시오.
 
 
 
@@ -463,7 +481,9 @@ Azure Logic Apps는 시각적 디자이너를 사용하여 비즈니스 프로�
 
 
 
-### 문항 13: Microsoft Entra ID(구 Azure Active Directory)란 무엇이며, 클라우드 환경에서 어떤 핵심적인 역할을 수행합니까?
+## 문항 13: 
+
+Microsoft Entra ID(구 Azure Active Directory)란 무엇이며, 클라우드 환경에서 어떤 핵심적인 역할을 수행합니까?
 
 
 
@@ -494,7 +514,9 @@ Microsoft Entra ID(이전 명칭: Azure Active Directory, Azure AD)는 Microsoft
 
 
 
-### 문항 14: Azure의 관리 그룹(Management Groups), 구독(Subscriptions), 리소스 그룹(Resource Groups)의 계층 구조와 각각의 용도는 무엇입니까?
+## 문항 14: 
+
+Azure의 관리 그룹(Management Groups), 구독(Subscriptions), 리소스 그룹(Resource Groups)의 계층 구조와 각각의 용도는 무엇입니까?
 
 
 
@@ -546,13 +568,11 @@ Root Management Group (테넌트 당 하나)
 
 
 
-## (2) 스토리지 & 데이터 관리
 
 
+## 문항 15: 
 
-
-
-### 문항 15: Azure Blob Storage의 세 가지 액세스 계층(핫, 쿨, 아카이브)은 각각 어떤 특징을 가지며, 비용 최적화를 위해 이들을 어떻게 활용할 수 있습니까?
+Azure Blob Storage의 세 가지 액세스 계층(핫, 쿨, 아카이브)은 각각 어떤 특징을 가지며, 비용 최적화를 위해 이들을 어떻게 활용할 수 있습니까?
 
 
 
@@ -606,7 +626,9 @@ Azure Blob Storage는 데이터의 액세스 빈도와 보존 기간에 따라 �
 
 
 
-### 문항 16: Azure Storage 계정의 유형(Standard general-purpose v2, Premium block blobs 등)에는 어떤 것들이 있으며, 각각의 주요 사용 사례는 무엇입니까?
+## 문항 16: 
+
+Azure Storage 계정의 유형(Standard general-purpose v2, Premium block blobs 등)에는 어떤 것들이 있으며, 각각의 주요 사용 사례는 무엇입니까?
 
 
 
@@ -666,7 +688,9 @@ Azure Storage는 다양한 성능, 비용, 기능 요구사항을 충족시키�
 
 
 
-### 문항 17: Azure Storage의 데이터 중복성 옵션(LRS, ZRS, GRS, GZRS)을 비교하고, 각 옵션의 가용성 SLA와 적합한 시나리오를 설명하시오.
+## 문항 17: 
+
+Azure Storage의 데이터 중복성 옵션(LRS, ZRS, GRS, GZRS)을 비교하고, 각 옵션의 가용성 SLA와 적합한 시나리오를 설명하시오.
 
 
 
@@ -738,7 +762,9 @@ Azure Storage는 하드웨어 장애, 네트워크 또는 전원 중단, 심지�
 
 
 
-### 문항 18: Azure Files와 Azure Blob Storage의 근본적인 차이점은 무엇이며, 각각 어떤 용도로 사용해야 합니까?
+## 문항 18: 
+
+Azure Files와 Azure Blob Storage의 근본적인 차이점은 무엇이며, 각각 어떤 용도로 사용해야 합니까?
 
 
 
@@ -791,7 +817,9 @@ Azure Files와 Azure Blob Storage는 모두 Azure Storage 플랫폼의 일부이
 
 
 
-### 문항 19: Azure File Sync란 무엇이며, 하이브리드 클라우드 환경에서 어떤 문제를 해결해 줍니까?
+## 문항 19: 
+
+Azure File Sync란 무엇이며, 하이브리드 클라우드 환경에서 어떤 문제를 해결해 줍니까?
 
 
 
@@ -826,7 +854,9 @@ Azure File Sync는 온프레미스 또는 클라우드에 있는 Windows Server�
 
 
 
-### 문항 20: Azure Data Factory(ADF)의 핵심 구성 요소(파이프라인, 활동, 데이터 세트, 연결된 서비스, 통합 런타임)에 대해 설명하시오.
+## 문항 20: 
+
+Azure Data Factory(ADF)의 핵심 구성 요소(파이프라인, 활동, 데이터 세트, 연결된 서비스, 통합 런타임)에 대해 설명하시오.
 
 
 
@@ -868,7 +898,9 @@ Azure Data Factory(ADF)는 데이터 이동 및 변환을 오케스트레이션�
 
 
 
-### 문항 21: Azure Data Factory의 통합 런타임(Integration Runtime) 세 가지 유형(Azure, Self-hosted, Azure-SSIS)은 각각 어떤 경우에 사용됩니까?
+## 문항 21: 
+
+Azure Data Factory의 통합 런타임(Integration Runtime) 세 가지 유형(Azure, Self-hosted, Azure-SSIS)은 각각 어떤 경우에 사용됩니까?
 
 
 
@@ -912,7 +944,9 @@ Azure Data Factory(ADF)의 통합 런타임(Integration Runtime, IR)은 데이�
 
 
 
-### 문항 22: Azure Synapse Analytics란 무엇이며, 기존의 데이터 웨어하우징 및 빅데이터 솔루션과 비교하여 어떤 통합된 가치를 제공합니까?
+## 문항 22: 
+
+Azure Synapse Analytics란 무엇이며, 기존의 데이터 웨어하우징 및 빅데이터 솔루션과 비교하여 어떤 통합된 가치를 제공합니까?
 
 
 
@@ -944,7 +978,9 @@ Azure Synapse가 제공하는 가장 큰 가치는 **'통합'**을 통해 분석
 
 
 
-### 문항 23: Azure Synapse Analytics의 서버리스 SQL 풀과 전용 SQL 풀의 차이점은 무엇이며, 각각 어떤 시나리오에 더 적합합니까?
+## 문항 23: 
+
+Azure Synapse Analytics의 서버리스 SQL 풀과 전용 SQL 풀의 차이점은 무엇이며, 각각 어떤 시나리오에 더 적합합니까?
 
 
 
@@ -989,7 +1025,9 @@ Azure Synapse Analytics는 데이터 쿼리 및 분석을 위해 두 가지 다�
 
 
 
-### 문항 24: Azure Databricks란 무엇이며, Azure Synapse Analytics와 어떤 관계에 있습니까?
+## 문항 24: 
+
+Azure Databricks란 무엇이며, Azure Synapse Analytics와 어떤 관계에 있습니까?
 
 
 
@@ -1029,7 +1067,9 @@ Azure Databricks와 Azure Synapse Analytics는 일부 기능이 겹치지만(둘
 
 
 
-### 문항 25: Azure Machine Learning이란 무엇이며, 머신러닝 모델 개발의 전체 수명 주기(MLOps)를 어떻게 지원합니까?
+## 문항 25: 
+
+Azure Machine Learning이란 무엇이며, 머신러닝 모델 개발의 전체 수명 주기(MLOps)를 어떻게 지원합니까?
 
 
 
